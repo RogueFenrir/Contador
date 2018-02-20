@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private Button boton2;
     private Button boton3;
     private TextView textview1;
-    int contador;
+    int contador=0;
+    String contadortext;
 
 
 
@@ -24,25 +25,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textview1=findViewById(R.id.textView);
-        textview1.setText(contador);
 
+        boton3=findViewById(R.id.button3);
+        boton1=findViewById(R.id.button);
+        boton2=findViewById(R.id.button2);
 
 }
 
     public void restar(View v){
-        boton1=findViewById(R.id.button);
+
         contador--;
+        contadortext=Integer.toString(contador);
+        textview1.setText(contadortext);
+
 
     }
     public void sumar(View v){
-        boton2=findViewById(R.id.button2);
+
         contador++;
+        contadortext=Integer.toString(contador);
+        textview1.setText(contadortext);
+
 
     }
 
     public void reset(View v){
-        boton3=findViewById(R.id.button3);
+
         contador=0;
+        contadortext=Integer.toString(contador);
+        textview1.setText(contadortext);
+
 
     }
 
